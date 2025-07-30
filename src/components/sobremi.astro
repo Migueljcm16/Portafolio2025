@@ -1,0 +1,99 @@
+---
+import Cielo from '../assets/fondo/cielo.webp';
+---
+
+<section class="sobre_mi">
+    <div class="sobre_mi-titulo">
+        <span>
+            Creo firmemente que las ideas más poderosas nacen donde la creatividad se une a una visión sólida. Es aquí donde el diseño se convierte en un verdadero motor de impacto.
+        </span>
+    </div>
+    <br>
+    <div class="sobre_mi-contenido">
+        <div class="sobre_mi-contenido-info">
+            <p>
+                Me llamo Miguel Jesús y soy programador full stack con ubicación en Lima, Perú. Desde el inicio, 
+                me ha apasionado no solo el desarrollo de software, sino la posibilidad de abordar proyectos 
+                de forma integral, combinando funcionalidad, diseño y experiencia de usuario.
+            </p>
+            <p>
+                Desarrollo páginas web y aplicaciones de escritorio aplicando buenas prácticas de programación 
+                y enfocándome en soluciones escalables, intuitivas y eficientes. He trabajado con distintos 
+                perfiles de clientes, desde emprendedores hasta empresas, adaptándome a sus necesidades 
+                y objetivos.
+            </p>
+            <p>
+                Trabajo de manera analitica porque cada proyecto merece una solución bien pensada, con 
+                tecnología adecuada y un enfoque estratégico que permita destacar y crecer. Hoy en dia busco
+                ayudar a las empresas y personas como yo que buscan transformar sus ideas en productos 
+                digitales sólidos y funcionales.
+            </p>
+        </div>
+        <div class="sobre_mi-contenido-relleno">
+            <img src={Cielo.src} alt="">
+            <span>DISEÑO WEB</span>
+            <span>IDENTIDAD VISUAL</span>
+            <span>OPTIMIZACIÓN DEL SEO</span>
+            <span>EXPERIENCIA DE USUARIO</span>
+            <span>PROGRAMACION FULL STACK</span>
+        </div>
+    </div>
+</section>
+
+<style>
+    .sobre_mi {
+        padding: 270px 30px 0px 30px;
+    }
+
+    .sobre_mi-titulo {
+        width: 640px;
+    }
+
+    .sobre_mi-titulo span {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .sobre_mi-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 40px;
+    }
+
+    .sobre_mi-contenido-info {
+        max-width: 500px;
+    }
+
+    .sobre_mi-contenido-info p {
+        color: #515151;
+    }
+
+    .sobre_mi-contenido-info p:last-child {
+        margin-bottom: 0px;
+    }
+
+    .sobre_mi-contenido-relleno {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 490px;
+    }
+
+    .sobre_mi-contenido-relleno img {
+        width: 100px;
+        margin-bottom: 15px;
+        user-select: none;
+    }
+
+    .sobre_mi-contenido-relleno span {
+        font-size: 35px;
+        font-weight: 700;
+        color: #adadad;
+        user-select: none;
+    }
+
+    .sobre_mi-contenido-relleno span:hover {
+        color: #272727;
+    }
+</style>

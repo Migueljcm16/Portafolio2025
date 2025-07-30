@@ -1,0 +1,98 @@
+---
+import Proyecto1 from '../assets/proyectos/mares-y-brasas.webp';
+import Proyecto2 from '../assets/proyectos/star-planet.webp';
+import Proyecto3 from '../assets/proyectos/necrophos.webp';
+import Proyecto4 from '../assets/proyectos/proximamente.webp';
+---
+
+<section class="proyectos">
+    <div class="proyectos-titulo">
+        <span>Proyectos Realizados</span>
+        <span>2024 - 2025</span>
+    </div>
+    <div class="proyectos-carta">
+        <a href="https://migueljcm16.github.io/mares-y-brasas/" target="_blank">
+            <div>
+                <img src={Proyecto1.src} alt="">
+            </div>
+            <span>Mares y Brasas</span>
+        </a>
+        <a href="https://migueljcm16.github.io/star-planet/" target="_blank">
+            <div>
+                <img src={Proyecto2.src} alt="">
+            </div>
+            <span>Star Planet</span>
+        </a>
+    </div>
+    <div class="proyectos-carta">
+        <a href="https://migueljcm16.github.io/Necrophos-DS/" target="_blank">
+            <div>
+                <img src={Proyecto3.src} alt="">
+            </div>
+            <span>Necrophos</span>
+        </a>
+        <a href="/" style="pointer-events: none;">
+            <div>
+                <img src={Proyecto4.src} alt="" style="filter: blur(1.5px);">
+            </div>
+            <span>Proximamente</span>
+        </a>
+    </div>
+</section>
+
+<style>
+    .proyectos {
+        padding: 120px 30px;
+    }
+
+    .proyectos-titulo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .proyectos-titulo span {
+        font-size: 14px;
+        font-weight: 500;
+        color: #747474;
+    }
+
+    .proyectos-carta {
+        display: flex;
+        margin-top: 25px;
+        gap: 25px;
+        user-select: none;
+    }
+
+    .proyectos-carta:last-child {
+        margin-top: 35px;
+    }
+
+    .proyectos-carta a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        width: 50%;
+        gap: 15px;
+    }
+
+    .proyectos-carta a div {
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .proyectos-carta a img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        transition: 0.2s ease-in-out;
+    }
+
+    .proyectos-carta a img:hover {
+        scale: 1.05;
+    }
+
+    .proyectos-carta a span {
+        color: #000000;
+        font-size: 18px;
+    }
+</style>

@@ -5,9 +5,10 @@
 <section class="contacto">
     <div>
         <div class="contacto-mensaje">
-            <span>
+            <span class="contacto-mensaje-texto text1">
                 BACKEND SOLIDO
-                <br>
+            </span>
+            <span class="contacto-mensaje-texto text2">
                 FRONTEND QUE BRILLA
             </span>
         </div>
@@ -30,10 +31,13 @@
     }
 
     .contacto-mensaje {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         font-size: 60px;
         font-weight: 800;
         line-height: 70px;
+        overflow: hidden;
     }
 
     .contacto-link a {
@@ -49,3 +53,35 @@
         color: #000000;
     }
 </style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".text1", {
+        y: 200,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".contacto",
+            start: "top 60%", 
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".text2", {
+        y: 200,
+        opacity: 0,
+        duration: 1.5,
+        delay: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".contacto",
+            start: "top 60%", 
+            toggleActions: "play none none none"
+        }
+    });
+</script>

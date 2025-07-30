@@ -7,7 +7,7 @@
         <span>
             Manifiesto
         </span>
-        <span>
+        <span class="introduccion-mensaje-texto">
             Desde la arquitectura técnica hasta la experiencia visual, desarrollo sistemas y plataformas 
             que no solo funcionan, sino que conectan, destacan y perduran. Mi enfoque combina estrategia, 
             diseño y programación para crear experiencias digitales modernas, funcionales y memorables. 
@@ -41,3 +41,21 @@
         font-weight: 500;
     }
 </style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".introduccion-mensaje-texto", {
+        opacity: 0,
+        duration: 3,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".introduccion",
+            start: "top 60%", 
+            toggleActions: "play none none none"
+        }
+    });
+</script>

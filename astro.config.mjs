@@ -5,7 +5,4 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://Migueljcm16.github.io',
     base: 'Portafolio2025',
-    devToolbar: {
-        enabled: false,
-    },
 });

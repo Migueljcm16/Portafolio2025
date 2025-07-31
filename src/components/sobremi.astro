@@ -96,4 +96,98 @@ import Cielo from '../assets/fondo/cielo.webp';
     .sobre_mi-contenido-relleno span:hover {
         color: #272727;
     }
+
+    @media only screen and (max-width: 1000px) {
+        .sobre_mi-titulo {
+            width: 595px;
+        }
+
+        .sobre_mi-titulo span {
+            font-size: 28px;
+        }
+
+        .sobre_mi-contenido {
+            gap: 30px;
+        }
+
+        .sobre_mi-contenido-info {
+            max-width: none;
+        }
+
+        .sobre_mi-contenido-relleno {
+            min-width: 448px;
+            gap: 15px;
+        }
+
+        .sobre_mi-contenido-relleno span {
+            font-size: 32px;
+            line-height: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .sobre_mi {
+            padding: 200px 20px 0px 20px;
+        }
+
+        .sobre_mi-titulo {
+            width: auto;
+        }
+
+        .sobre_mi-titulo span {
+            font-size: 26px;
+        }
+
+        .sobre_mi-contenido {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .sobre_mi-contenido-relleno {
+            align-items: flex-start;
+            min-width: 100%;
+        }
+
+        .sobre_mi-contenido-relleno img {
+            width: 90px;
+            margin-bottom: 10px;
+        }
+
+        .sobre_mi-contenido-relleno span {
+            font-size: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .sobre_mi-titulo span {
+            font-size: 24px;
+        }
+
+        .sobre_mi-contenido-relleno img {
+            width: 80px;
+        }
+
+        .sobre_mi-contenido-relleno span {
+            font-size: 24px;
+        }
+
+        .sobre_mi-contenido-relleno {
+            gap: 8px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .sobre_mi-titulo span {
+            font-size: 20px;
+        }
+
+        .sobre_mi-contenido-relleno img {
+            width: 70px;
+        }
+
+        .sobre_mi-contenido-relleno span {
+            font-size: 22px;
+        }
+    }
 </style>

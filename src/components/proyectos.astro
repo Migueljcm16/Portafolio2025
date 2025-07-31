@@ -96,4 +96,35 @@ import Proyecto4 from '../assets/proyectos/proximamente.webp';
         color: #000000;
         font-size: 18px;
     }
+
+    @media only screen and (max-width: 1000px) {
+        .proyectos-titulo span {
+            font-size: 12px;
+        }
+
+        .proyectos-carta {
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .proyectos-carta a span {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .proyectos {
+            padding: 100px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .proyectos-titulo span {
+            font-size: 10px;
+        }
+
+        .proyectos-carta a span {
+            font-size: 14px;
+        }
+    }
 </style>

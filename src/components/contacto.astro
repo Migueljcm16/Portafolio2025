@@ -52,36 +52,43 @@
     .contacto-link a:hover {
         color: #000000;
     }
+
+    @media only screen and (max-width: 1000px) {
+        .contacto-mensaje {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        .contacto-link a {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) { 
+        .contacto {
+            padding: 180px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .contacto-mensaje {
+            font-size: 40px;
+            line-height: 45px;
+        }
+
+        .contacto-link a {
+            font-size: 12px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .contacto-mensaje {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .contacto-link a {
+            font-size: 9px;
+        }
+    }
 </style>
-
-<script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".text1", {
-        y: 200,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".contacto",
-            start: "top 60%", 
-            toggleActions: "play none none none"
-        }
-    });
-
-    gsap.from(".text2", {
-        y: 200,
-        opacity: 0,
-        duration: 1.5,
-        delay: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".contacto",
-            start: "top 60%", 
-            toggleActions: "play none none none"
-        }
-    });
-</script>

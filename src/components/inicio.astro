@@ -37,11 +37,11 @@ import Fondo from '../assets/fondo/fondo-inicio.webp';
     }
 
     .inicio-frase {
-        width: 445px;
+        max-width: 445px;
     }
 
     .inicio-frase span {
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
         color: #adadad;
     }
@@ -49,7 +49,6 @@ import Fondo from '../assets/fondo/fondo-inicio.webp';
     .inicio-desc {
         display: flex;
         gap: 40px;
-            overflow: hidden;    overflow: hidden;
     }
 
     .inicio-desc > div {
@@ -57,10 +56,11 @@ import Fondo from '../assets/fondo/fondo-inicio.webp';
         align-items: flex-start;
         flex-direction: column-reverse;
         gap: 25px;
+        overflow: hidden;
     }
 
     .inicio-desc > div span {
-        width: 500px;
+        max-width: 500px;
         color: #515151;
     }
 
@@ -75,15 +75,62 @@ import Fondo from '../assets/fondo/fondo-inicio.webp';
         aspect-ratio: 1;
         object-fit: cover;
     }
+
+    @media only screen and (max-width: 1000px) {
+        .inicio {
+            min-height: 100svh;
+        }
+
+        .inicio-desc {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .inicio-desc img {
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .inicio {
+            padding: 90px 20px 0px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .inicio {
+            justify-content: flex-start;
+            gap: 50px;
+        }
+
+        .inicio-frase span {
+            font-size: 18px;
+        }
+
+        .inicio-desc {
+            flex: 1;
+        }
+
+        .inicio-desc > div {
+            gap: 15px;
+        }
+
+        .inicio-desc img {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            flex: 1;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .inicio {
+            gap: 50px;
+        }
+
+        .inicio-frase span {
+            font-size: 15px;
+        }
+    }
 </style>
-
-<script>
-    import { gsap } from "gsap";
-
-    gsap.from(".inicio-desc-letras", {
-        y: 500,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out"
-    });
-</script>
